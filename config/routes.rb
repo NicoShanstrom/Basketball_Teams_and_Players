@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   # root "posts#index"
   get '/basketball_teams', to: 'basketball_teams#index'
   get '/basketball_teams/:id', to: 'basketball_teams#show'
+  get '/players', to: 'players#index'
+  get '/players/:id', to: 'players#show'
+  get '/basketball_teams/:basketball_team_id/players', to: 'basketball_team_players#index'
+  
 end
