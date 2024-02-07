@@ -1,5 +1,9 @@
+<%= link_to "/players" %>
+<%= link_to "/basketball_teams" %>
+<%= link_to "/basketball_teams/#{@basketball_team.id}/players" %>
+
 <h1><%= @basketball_team.name %></h1>
 <p>City: <%= @basketball_team.city %></p>
 <p>Innaguration Year: <%= @basketball_team.innaguration_year %></p>
-<p>Championship: <%= @basketball_team.championship? %></p>
+<p>Championship: <%= @basketball_team.championship %></p>
 <p>Conference: <%= @basketball_team.conference %></p>

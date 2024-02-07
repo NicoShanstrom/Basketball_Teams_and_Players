@@ -1,0 +1,12 @@
+<%= link_to "/players" %>
+<%= link_to "/basketball_teams" %>
+<h1>Players</h1>
+<ul>
+    <% @players.each do |player| %>
+        <li><%= player.name %>
+        <li><%= player.jersey_number %>
+        <li><%= player.year_drafted %>
+        <li><%= player.all_star %>
+        <li><%= player.basketball_team_id %>
+    <% end %>
+</ul>
