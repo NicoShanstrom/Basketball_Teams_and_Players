@@ -39,8 +39,7 @@ RSpec.describe 'players#index', type: :feature do
     it 'has a link on the top of any page to the basketball_team index page' do
         visit '/players'
 
-        expect(page).to have_link('/basketball_teams')
-
+        expect(page).to have_link('All Teams')
     end
 
 end

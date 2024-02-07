@@ -9,4 +9,8 @@ class BasketballTeam < ApplicationRecord
     def count_players
         players.count
     end
+
+    def self.ordered_teams
+        order(created_at: :desc)
+    end
 end
