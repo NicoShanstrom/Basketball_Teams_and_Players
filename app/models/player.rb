@@ -5,4 +5,8 @@ class Player < ApplicationRecord
     validates :year_drafted, presence: true
     validates :all_star, presence: true
     validates :basketball_team_id, presence: true
+
+    def self.count_players
+        count
+    end
 end

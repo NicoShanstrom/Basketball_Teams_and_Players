@@ -54,8 +54,10 @@ RSpec.describe 'basketball_teams#show', type: :feature do
         end
 
         it 'shows the number of players associated with a specific basketball team :id' do
-            visit "/basketball_teams/#{@heat.id}/players"
-            expect(@heat.count_players).to eq(3)
+            visit "/basketball_teams/#{@heat.id}"
+            
+            expect(page).to have_content("Number of Players: 3")
+            # expect(@heat.count_players).to eq(3)
         end
     end
 
