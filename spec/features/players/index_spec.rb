@@ -30,4 +30,17 @@ RSpec.describe 'players#index', type: :feature do
         expect(page).to have_content(@dwade.all_star)
         expect(page).to have_content(@dwade.basketball_team_id)
     end
+
+    # User Story 9, Parent Index Link
+
+    # As a visitor
+    # When I visit any page on the site
+    # Then I see a link at the top of the page that takes me to the Parent Index
+    it 'has a link on the top of any page to the basketball_team index page' do
+        visit '/players'
+
+        expect(page).to have_link('/basketball_teams')
+
+    end
+
 end

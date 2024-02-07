@@ -53,7 +53,7 @@ group :development, :test do
   gem "orderly"
   gem "launchy"
   gem "simplecov"
-  gem "shoulda-matchers"
+  gem 'shoulda-matchers', '~> 6.0'
   gem "factory_bot_rails"
   gem "faker"
   gem "rspec-rails"

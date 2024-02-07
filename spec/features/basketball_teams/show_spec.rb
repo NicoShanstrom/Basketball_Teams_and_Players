@@ -24,6 +24,17 @@ RSpec.describe 'basketball_teams#show', type: :feature do
         expect(page).to have_content(@heat.conference)
     end
 
+    # User Story 10, Parent Child Index Link
+
+    # As a visitor
+    # When I visit a parent show page ('/parents/:id')
+    # Then I see a link to take me to that parent's `child_table_name` page ('/parents/:id/child_table_name')
+
+    it 'has a link to take the user to the specific basketball team players page' do
+       visit "/basketball_teams/#{@heat.id}"
+       expect(page).to have_link("/basketball_teams/#{@heat.id}/players")
+    end
+
 # User Story 7, Parent Child Count
 
 # As a visitor
@@ -43,7 +54,6 @@ RSpec.describe 'basketball_teams#show', type: :feature do
         end
 
         it 'shows the number of players associated with a specific basketball team :id' do
-            
             visit "/basketball_teams/#{@heat.id}/players"
             expect(@heat.count_players).to eq(3)
         end

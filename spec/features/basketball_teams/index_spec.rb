@@ -21,6 +21,19 @@ RSpec.describe 'basketball_teams#index' do
         expect(page).to have_content(@lakers.name)
     end
 
+    # User Story 8, Child Index Link
+
+    # As a visitor
+    # When I visit any page on the site
+    # Then I see a link at the top of the page that takes me to the Child Index
+
+    it 'has a link on the top of any page to the player index page' do
+        visit '/basketball_teams'
+
+        expect(page).to have_link('/players')
+
+    end
+
     # User Story 6, Parent Index sorted by Most Recently Created 
 
     # As a visitor

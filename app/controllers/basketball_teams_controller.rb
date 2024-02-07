@@ -5,6 +5,7 @@ class BasketballTeamsController < ApplicationController
 
   def show
     @basketball_team = BasketballTeam.find(params[:id])
+
   end
 
   def sort

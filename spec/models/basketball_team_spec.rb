@@ -12,4 +12,8 @@ RSpec.describe BasketballTeam, type: :model do
     describe 'relationships' do
         it { should have_many(:players) }
     end
+
+    # describe "count_players" do
+    #     it { should count(:players) }
+    # end
 end
